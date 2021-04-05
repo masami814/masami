@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>shiro_form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xpw1yxk.css">
+  </head>
+  <body>
+    <header class="header form">
+      <div class="header__nav">
+        <div class="u-content-wrapper header__nav__wrapper">
+          <a class="header__nav__logo" href="index.html">Shiro</a>
+          <div class="hamburger-menu">
+            <span class="hamburger-menu__line"></span>
+            <span class="hamburger-menu__line--dummy"></span>
+          </div>
+        </div>
+        <ul class="header-menu">
+          <li class="header__menu__item"><a href="index.html">Top page</a></li>
+        </ul>
+      </div>
+      <div class="u-content-wrapper">
+        <h1 class="form__title">お問い合わせ</h1>
+      </div>
+    </header>
+    <form>
+      <div class="u-content-wrapper">
+        <div class="item">
+          <label class="label">お名前</label>
+          <input class="inputs" type="text" name="name">
+        </div>
+        <div class="item">
+          <label class="label">メールアドレス</label>
+          <input class="inputs" type="email" name="email">
+        </div>
+        <div class="item">
+          <label class="label">ご意見</label>
+          <textarea class="inputs"></textarea>
+        </div>
+        <div class="btn-area">
+          <input type="submit" value="送信">
+        </div>
+      </div>
+    </form>
+    <footer class="footer">
+      <div class="u-content-wrapper">
+        <small class="footer__copyright">Copyright © Shiro All Rights Reserved.</small>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(function() {
+      /*** ハンバーガーメニューの表示/非表示 ***/
+      $('.hamburger-menu').on('click', function() {
+        $('.hamburger-menu').toggleClass('active');
+        $('.header-menu').toggleClass('height-change');
+      });
+      $('.header__menu__item').on('click', function() {
+        $('.hamburger-menu').removeClass('active');
+        $('.header-menu').toggleClass('height-change');
+      });
+
+    });
+    </script>
+  </body>
+</html>
